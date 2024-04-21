@@ -1,0 +1,59 @@
+site_name: David R Hagen
+site_description: Personal website of David R Hagen, scientific software engineer
+site_author: David Hagen
+
+copyright: >
+  &copy; David R Hagen. Content available under
+  <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC-BY</a> license.
+
+theme:
+  name: material
+
+  icon:
+    logo: fontawesome/solid/rocket
+
+  palette:
+    - scheme: default
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: yellow
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+markdown_extensions:
+  - def_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - blog:
+      post_url_format: "{slug}"
+  - rss:
+      match_path: "blog/posts/*"
+      use_git: false
+      date_from_meta:
+        as_creation: date
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/drhagen
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/1485877/drhagen
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/drhagen
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/davidrhagen/
+
+nav:
+  - Home: index.md
+  - CV: cv.md
+  - Software: software.md
+  - Blog: blog/index.md
