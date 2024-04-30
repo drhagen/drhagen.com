@@ -23,7 +23,7 @@ If the jury is too small, then a successful bribe carries a lot of weight. We do
 
 On the flipside, if the jury is too big, then the original problem returns. Each vote begins to not matter much. The original US House of Representatives had [one representative for every 30,000 people](https://www.archives.gov/founding-docs/constitution-transcript). Each representative was elected by much fewer than 30,000 people, considering that [suffrage was fairly restricted at the time](https://www.crf-usa.org/bill-of-rights-in-action/bria-8-1-b).
 
-Keep all this in mind, I think a number of jurors in the 1000-10000 range is about right.
+Keeping all this in mind, I think a number of jurors in the 1000-10000 range is about right.
 
 ## Jury Location
 

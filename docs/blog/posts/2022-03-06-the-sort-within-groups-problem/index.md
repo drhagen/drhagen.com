@@ -144,7 +144,7 @@ df.with_column(pl.col('value').sort().over('group'))
 # shape: (6, 2)
 # ┌───────┬───────┐
 # │ group ┆ value │
-# │ --- ┆ --- │
+# │ ----- ┆ ----- │
 # │ i64   ┆ i64   │
 # ╞═══════╪═══════╡
 # │ 2     ┆ 1     │

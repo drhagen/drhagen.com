@@ -112,7 +112,6 @@ I am unsure if this multiline style should be the standard. It is definitely dif
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 # TypeError: list indices must be integers or slices, not str
-
 ```
 
 So this is something that Python does sometimes, but not always. I suspect that these message strings are assembled eagerly and Python wants to return a static string in the `IndexError` case because formatting a string would slow down the code when using `IndexError` is caught for control flow, whereas catching a `TypeError` is rarely on the critical path. Python would probably do better to modify the `IndexError` class to have a two attributes `length` and `index` and then have `__str__` generate a good error message lazily. (I leave as an exercise to the reader where to put the comma to make the above code a legal Python statement.)
@@ -123,7 +122,7 @@ Rust, which does not use index out of bounds for flow control, does include this
 fn main() {
     vec![1, 2, 3][3];
 }
-# thread 'main' panicked at 'index out of bounds: the len is 3 but the index is 3', src/main.rs:2:5
+// thread 'main' panicked at 'index out of bounds: the len is 3 but the index is 3', src/main.rs:2:5
 ```
 
 ## Suggestions

@@ -5,7 +5,7 @@ categories:
   - "programming"
 ---
 
-In my last post, I talked about the various kinds of syntax for getting and setting elements in sequences. This post will talk about semantics. What exactly should `get` and `mutate` do when invoked? What should happen when the index is valid is hopefully obvious. But because we have to handle the case of an invalid index—in particular, an index larger than the length of the sequence, the answer is not as clear-cut as it may seem. If "throw an exception" is the only thing that comes to mind, you have been stuck in procedural programming for too long.
+In my [last post](/blog/one-sided-debate-over-sequence-syntax/), I talked about the various kinds of syntax for getting and setting elements in sequences. This post will talk about semantics. What exactly should `get` and `mutate` do when invoked? What should happen when the index is valid is hopefully obvious. But because we have to handle the case of an invalid index—in particular, an index larger than the length of the sequence, the answer is not as clear-cut as it may seem. If "throw an exception" is the only thing that comes to mind, you have been stuck in procedural programming for too long.
 
 <!-- more -->
 
