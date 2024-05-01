@@ -33,6 +33,7 @@ markdown_extensions:
   - pymdownx.superfences
 
 plugins:
+  - search
   - blog:
       post_url_format: "{slug}"
   - rss:

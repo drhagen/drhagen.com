@@ -15,58 +15,64 @@ Graduated valedictorian with 4.0 GPA
 ## Expertise
 
 - Software Engineering: in particular, the data structures representing scientific workflows and the architecture to execute those workflows
+
 - Statistics: in particular, information theory and Bayesian theory with an appreciation for the importance of understanding the assumptions behind the techniques being applied
+
 - Programming: Python, Matlab, and R; also Bash and C; past proficiency in Scala and C#
-- Computers: Windows and Linux
+
+- Cloud computing: in particular, autoscaled dockerized deployments and high performance computing on a custom job scheduler on AWS
 
 ## Career History
 
 ### Software Engineer, *Applied BioMath*, 2017–present
 
-- Director of Engineering, Feb 2023–present
+**Director of Engineering**, Feb 2023–present
 
-- Senior Principal Scientist, Sep 2020–Feb 2023
+**Senior Principal Scientist**, Sep 2020–Feb 2023
 
-- Associate Director of IT, Apr 2020–Feb 2023
+**Associate Director of IT**, Apr 2020–Feb 2023
 
-- Principal Software Engineer, Jun 2017–Sep 2020
+**Principal Software Engineer**, Jun 2017–Sep 2020
 
-    - Design and implementation web applications for pharmaceutical modeling
+- Design and implementation of web applications for pharmaceutical modeling
 
 ### Data Scientist, *Merck*, 2014–2017
 
-- Associate Principal Scientist, May 2017–Jun 2017
+**Associate Principal Scientist**, May 2017–Jun 2017
 
-- Senior Scientist, Jul 2014–May 2017
+**Senior Scientist**, Jul 2014–May 2017
 
-    - Improved the KroneckerBio toolbox to serve as platform for a QSP model of diabetes, which used literature, preclinical, and early data to predict outcomes of later trials and to reveal the desirable characteristics of backup compounds
+- Improved the KroneckerBio toolbox to serve as platform for a QSP model of diabetes, which used literature, preclinical, and early data to predict outcomes of later trials and to reveal the desirable characteristics of backup compounds
 
-    - Used the KroneckerBio toolbox to develop a PBPK model of anacetrapib to investigate the source of the compound's long terminal half-life, supplying superior estimates of parameter uncertainty
+- Used the KroneckerBio toolbox to develop a PBPK model of anacetrapib to investigate the source of the compound's long terminal half-life, supplying superior estimates of parameter uncertainty
 
-    - When the simulation platform for Keytruda crashed with a imminent filing, stepped in to reconstitute the workflow at the Linux command line over a couple of days, also bringing simulation time from 48 hours down to 20 minutes and analysis time from 40 hours to 4 minutes
+- When the simulation platform for Keytruda crashed with a imminent filing, stepped in to reconstitute the workflow at the Linux command line over a couple of days, also bringing simulation time from 48 hours down to 20 minutes and analysis time from 40 hours to 4 minutes
 
-    - Served as technical lead on the development of a web-based workbench for NONMEM modeling and R analysis, ensuring traceability and reproducibility for modeling and simulation
+- Served as technical lead on the development of a web-based workbench for NONMEM modeling and R analysis, ensuring traceability and reproducibility for modeling and simulation
 
-    - Designed and developed a preclinical compartmental fitting tool to automate the fitting and selection of a set of basic PK models to every batch of incoming study data with an appropriate design
+- Designed and developed a preclinical compartmental fitting tool to automate the fitting and selection of a set of basic PK models to every batch of incoming study data with an appropriate design
 
-    - Designed and developed a Matlab tool for submitting arbitrary functions from a user's Matlab desktop to the Linux cluster, saving $17000 in license fees per user
+- Designed and developed a Matlab tool for submitting arbitrary functions from a user's Matlab desktop to the Linux cluster, saving $17000 in license fees per user
 
-    - Designed and developed an internal R Shiny web application for converting SAS datasets to CSV to reduce the need for SAS installations and expertise
+- Designed and developed an internal R Shiny web application for converting SAS datasets to CSV to reduce the need for SAS installations and expertise
 
-    - Collaborated on the design and implementation of a R library for standardized plotting and reporting; designed and implemented a library to ease the checking of datasets for errors and for easily comparing two datasets
+- Collaborated on the design and implementation of a R library for standardized plotting and reporting; designed and implemented a library to ease the checking of datasets for errors and for easily comparing two datasets
 
-### Graduate Researcher, _Bruce Tidor lab, Massachusetts Institute of Technology_, 2009–2014
+### Graduate Researcher, *Bruce Tidor lab, Massachusetts Institute of Technology*, 2009–2014
 
 - Developed a novel method for computing the probability distribution on a set of discrete topologies according to a set of data using linearization as an approximation technique, showing that it gave a comparable answer to a gold-standard Monte Carlo method, while taking far less computational resources
+
 - Demonstrated that linearization was an effective technique for approximating parameter uncertainty for the purpose of optimal experimental design, showing in a computational scenario, that the parameters of a biological network could be recovered from noisy data using a handful of optimally chosen experiments
+
 - Developed and maintained KroneckerBio, the laboratory's systems biology toolbox written in Matlab, preforming simulation, parameter fitting, and statistical analysis of parameter and topology uncertainty.
+
 - Managed a 2000-core high performance computing cluster
 
-### Teaching Assistant, _Biological Engineering Department, Massachusetts Institute of Technology,_ 2009
+### Teaching Assistant, *Biological Engineering Department, Massachusetts Institute of Technology*, 2009
 
 - In collaboration with co-TA Tim Curran, re-wrote the class tutorials, homework instructions, and implementation assignments of 20.420 Biomolecular Kinetics and Cellular Dynamics class, which by both the student and instructor accounts, greatly improved the learning to effort ratio of the out-of-class assignments, an effect that persists year after year as the material is reused by subsequent TAs
 
-### Undergraduate Researcher, _Richard W Hanson lab, Case Western Reserve University_, 2005–2008
+### Undergraduate Researcher, *Richard W Hanson lab, Case Western Reserve University*, 2005–2008
 
 - Responsible for developing and testing hypotheses concerning the PEPCK-Cmus mice, a strain of super-active mice created in the lab
 - Applied for and received funding for my own research project studying the effect of the transgene on metabolism and diabetes
