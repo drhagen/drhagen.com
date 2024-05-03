@@ -5,7 +5,7 @@ categories:
   - "programming"
 ---
 
-In the [previous post](/blog/superior-pairing-function/), I compared ways to take two infinite streams and generate a new stream that is all possible combinations of the elements in those streams. This post takes it up another level and generalizes this procedure to an arbitrarily long list of infinite streams. This is a trickier task than the 2-dimensional case, utilizing recursion into each dimension to cleanly generate all combinations.
+In the [previous post](../2018-03-27-superior-pairing-function/index.md), I compared ways to take two infinite streams and generate a new stream that is all possible combinations of the elements in those streams. This post takes it up another level and generalizes this procedure to an arbitrarily long list of infinite streams. This is a trickier task than the 2-dimensional case, utilizing recursion into each dimension to cleanly generate all combinations.
 
 Throughout this post, the caret `^` will indicate exponentiation and parentheses `list(index)` will be used to indicate indexing a list. As before, 0-indexing will be used because it makes the math simpler. 
 

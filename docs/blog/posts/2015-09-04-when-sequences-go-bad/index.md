@@ -5,7 +5,7 @@ categories:
   - "programming"
 ---
 
-In my [last post](/blog/one-sided-debate-over-sequence-syntax/), I talked about the various kinds of syntax for getting and setting elements in sequences. This post will talk about semantics. What exactly should `get` and `mutate` do when invoked? What should happen when the index is valid is hopefully obvious. But because we have to handle the case of an invalid index—in particular, an index larger than the length of the sequence, the answer is not as clear-cut as it may seem. If "throw an exception" is the only thing that comes to mind, you have been stuck in procedural programming for too long.
+In my [last post](../2015-05-09-one-sided-debate-over-sequence-syntax/index.md), I talked about the various kinds of syntax for getting and setting elements in sequences. This post will talk about semantics. What exactly should `get` and `mutate` do when invoked? What should happen when the index is valid is hopefully obvious. But because we have to handle the case of an invalid index—in particular, an index larger than the length of the sequence, the answer is not as clear-cut as it may seem. If "throw an exception" is the only thing that comes to mind, you have been stuck in procedural programming for too long.
 
 <!-- more -->
 
@@ -21,7 +21,7 @@ I am not a fan of using exceptions for non-exceptional cases. And an index being
 
 Returning `null` is an attractive idea. It is how Ceylon does it. For a collection of type `Seq[A]` the return type of `get` is `A|Null`, which forces the user to handle the `null` case. But there is minor difficulty with this: what if the sequence itself contains `null`? If I ran `seq(i)` and get back `null`, how could I tell the difference between there being a `null` at point `i` in the sequence and `i` being larger than the length? I couldn't—the value is `null` is both cases. Maybe it doesn't matter because I want to handle both cases the same. Maybe the collection is typed so that it can't have `null`s. But if I do care and it can happen, then I am stuck. This makes this a suboptimal choice for a collections library, which needs to handle sequences of arbitrary objects.
 
-We can escape the confusion of `null` by returning a optional value—returning `Some(value)` if we found a value and returning `None` if not value was found. Notice how a sequence containing a `None` is handled seamlessly. If `seq(i)` is `None`, then `Some(None)` is returned, which is different from `None` itself. Like in [my iterators post](/blog/comparison-of-iteration-styles-in-programming/), I would go with this, the safest option.
+We can escape the confusion of `null` by returning a optional value—returning `Some(value)` if we found a value and returning `None` if not value was found. Notice how a sequence containing a `None` is handled seamlessly. If `seq(i)` is `None`, then `Some(None)` is returned, which is different from `None` itself. Like in [my iterators post](../2014-12-29-comparison-of-iteration-styles-in-programming/index.md), I would go with this, the safest option.
 
 ## Return value of `mutate`
 

@@ -5,7 +5,7 @@ categories:
   - "culture"
 ---
 
-Previously, I explained why the [11th of most months is mentioned far less than the other days](/blog/the-missing-11th-of-the-month/) in the Google Ngrams database of English literature from 1800-2008. This was to solve a long-standing question posed in an [xkcd comic](https://xkcd.com/1140/). While researching this, I encountered another mystery: the 2nd, 3rd, 22nd, and 23rd are unusually low as well—but only until the 1930s, at which point they become perfectly normal days. Last time, I set this question aside to focus on the 11th. In this installment, I explain the strange behavior of these four days.
+Previously, I explained why the [11th of most months is mentioned far less than the other days](../2015-12-29-the-missing-11th-of-the-month/index.md) in the Google Ngrams database of English literature from 1800-2008. This was to solve a long-standing question posed in an [xkcd comic](https://xkcd.com/1140/). While researching this, I encountered another mystery: the 2nd, 3rd, 22nd, and 23rd are unusually low as well—but only until the 1930s, at which point they become perfectly normal days. Last time, I set this question aside to focus on the 11th. In this installment, I explain the strange behavior of these four days.
 
 <!-- more -->
 

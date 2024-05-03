@@ -33,7 +33,7 @@ This deficit has been around for a long time. Below is all the ordinals for eve
     ![ordinals_1800-2008](images/ordinals_1800-2008_dark.png#only-dark)
 </figure>
 
-Astute graph readers will notice that something else weird is going on. There are four other lines that are much lower than they should be. From highest to lowest, they are the `2nd`, the `3rd`, the `22nd`, and the `23rd`. They were even lower than the `11th` from 1800 until the 1890s. However, starting around 1900, their gaps started shrinking even as the `11th` diverged until the gap disappeared completely in the 1930s. There is an interesting story there, but because their effect doesn't persist to the present, I'll continue to focus on the `11th` and leave the others for a [future post](/blog/the-missing-23rd-of-the-month/).
+Astute graph readers will notice that something else weird is going on. There are four other lines that are much lower than they should be. From highest to lowest, they are the `2nd`, the `3rd`, the `22nd`, and the `23rd`. They were even lower than the `11th` from 1800 until the 1890s. However, starting around 1900, their gaps started shrinking even as the `11th` diverged until the gap disappeared completely in the 1930s. There is an interesting story there, but because their effect doesn't persist to the present, I'll continue to focus on the `11th` and leave the others for a [future post](../2016-01-02-the-missing-23rd-of-the-month/index.md).
 
 ## Typographical hijinks
 

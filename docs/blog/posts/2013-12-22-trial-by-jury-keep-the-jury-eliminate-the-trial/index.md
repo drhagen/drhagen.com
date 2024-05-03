@@ -5,7 +5,7 @@ categories:
   - "policy"
 ---
 
-[Yesterday](/blog/trial-by-jury-just-give-us-the-facts/), I made a simple argument for handing the jurors the facts that are not in dispute at the beginning of the trial. I want to extend that argument a bit further to a more expansive idea that I have. Rather than just giving the undisputed facts to the jurors, why not boil the entire trial down to its text and give it to the jury as a kind of case study. All of the questions asked in the trial are already in multiple depositions. If a witness gives an answer that is different from the deposition, the deposition is brought out and read. Why not deliver all the evidence to the jury in writing? I can read faster than I can listen, and importantly, I can alter my pace as needed.
+[Yesterday](../2013-12-21-trial-by-jury-just-give-us-the-facts/index.md), I made a simple argument for handing the jurors the facts that are not in dispute at the beginning of the trial. I want to extend that argument a bit further to a more expansive idea that I have. Rather than just giving the undisputed facts to the jurors, why not boil the entire trial down to its text and give it to the jury as a kind of case study. All of the questions asked in the trial are already in multiple depositions. If a witness gives an answer that is different from the deposition, the deposition is brought out and read. Why not deliver all the evidence to the jury in writing? I can read faster than I can listen, and importantly, I can alter my pace as needed.
 
 <!-- more -->
 

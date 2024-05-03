@@ -10,6 +10,6 @@ You may be interested in my [open source software projects](software.md) or my i
 
 ## Highlighted blog posts
 
-- [solving xkcd's riddle of the 11th of the month](/blog/the-missing-11th-of-the-month/)
-- [how to eliminate money from politics while alleviating voter apathy](/blog/the-electoral-jury/)
-- [how to sanely define equality in a programming language](/blog/sane-equality/)
+- [solving xkcd's riddle of the 11th of the month](blog/posts/2015-12-29-the-missing-11th-of-the-month/index.md)
+- [how to eliminate money from politics while alleviating voter apathy](blog/posts/2014-02-05-the-electoral-jury/index.md)
+- [how to sanely define equality in a programming language](blog/posts/2015-09-14-sane-equality/index.md)
