@@ -1,0 +1,904 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal website of David R Hagen, scientific software engineer">
+      
+      
+        <meta name="author" content="David Hagen">
+      
+      
+        <link rel="canonical" href="https://drhagen.com/blog/difficulty-of-pattern-matching-syntax/">
+      
+      
+        <link rel="prev" href="../free-star-wars-for-everyone/">
+      
+      
+        <link rel="next" href="../one-sided-debate-over-sequence-syntax/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Difficulty of Pattern Matching Syntax - David R Hagen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#otherwise-_" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="David R Hagen" class="md-header__button md-logo" aria-label="David R Hagen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M156.6 384.9 125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2 3-8.9 7-20.5 11.8-33.8H24c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7.2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3H200c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8 13.4 72.9 9.3 194.8-111.4 276.7-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1.2S224 496.7 224 488V380.8c-14.1 4.9-26.4 8.9-35.7 11.9-11.2 3.6-23.4.5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            David R Hagen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Difficulty of Pattern Matching Syntax
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="yellow" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="David R Hagen" class="md-nav__button md-logo" aria-label="David R Hagen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M156.6 384.9 125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2 3-8.9 7-20.5 11.8-33.8H24c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7.2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3H200c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8 13.4 72.9 9.3 194.8-111.4 276.7-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1.2S224 496.7 224 488V380.8c-14.1 4.9-26.4 8.9-35.7 11.9-11.2 3.6-23.4.5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+
+    </a>
+    David R Hagen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#otherwise-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otherwise (_)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equality-eq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equality (eq)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance (is)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destructuring-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructuring (to)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-as" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment (as)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-uses-of-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Uses of Pattern Matching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eq-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      eq only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eq-on-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      eq on literals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-outside-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      as outside pattern matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-and-to-combo" class="md-nav__link">
+    <span class="md-ellipsis">
+      is and to combo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lowercase-as-and-uppercase-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      lowercase as and uppercase is
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-is-and-object-eq" class="md-nav__link">
+    <span class="md-ellipsis">
+      type is and object eq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-is-and-object-eq-and-undefined-as" class="md-nav__link">
+    <span class="md-ellipsis">
+      type is and object eq and undefined as
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2015-03-07 00:00:00" class="md-ellipsis">March 7, 2015</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/programming/">programming</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+  <h1>Difficulty of Pattern Matching Syntax</h1>
+
+<p>Pattern matching is compact syntax, originating in functional programming languages, that acts a super-charged switch statement, allowing one to concisely branch on the types and components of a value of interest. Like a traditional switch statement, a pattern match takes a single object and compares it to sequence of cases, running the code body associated with the matching case. There are many parts to a pattern matcher. and design concise and unambiguous syntax is a difficult endeavor, one failed by many popular programming languages.</p>
+<!-- more -->
+
+<p>There are five things that pattern matchers can do:</p>
+<ol>
+<li><strong>Equality:</strong> match if the value is equal to another particular value</li>
+<li><strong>Instance</strong>: match if the value is an instance of a particular type</li>
+<li><strong>Destructuring</strong>: split the value up into its components and match on each one</li>
+<li><strong>Assignment</strong>: assign the value to a name</li>
+<li><strong>Otherwise</strong>: match any value</li>
+<li><strong>Guards</strong>: after-the-fact test an arbitrary boolean expression</li>
+</ol>
+<h2 id="otherwise-_">Otherwise (_)</h2>
+<p>In some sense, the default case is the simplest. This is the pattern that matches any value. It is often given its own keyword, such as <code>default</code> or <code>otherwise</code> or <code>else</code>. In other languages, it gets its own symbol, such as <code>*</code> or <code>_</code>. In languages with full pattern matching, such as Scala, Haskell, and F#, <code>_</code> is most common, which is what will be used in this post.</p>
+<div class="highlight"><pre><span></span><code>print(&quot;What happened today?&quot;)
+response = read()
+
+switch response:
+  _:
+    print(&quot;And how does that make you feel?&quot;)
+</code></pre></div>
+<p>Because the rest of the tests can be combined, this really represents an empty list of tests. The best syntax for this may be simply listing nothing. The nothingness starts to become a little too invisible for my taste.</p>
+<div class="highlight"><pre><span></span><code>switch response:
+  :
+    print(&quot;And how does that make you feel?&quot;)
+</code></pre></div>
+<h2 id="equality-eq">Equality (eq)</h2>
+<p>With equality testing, a case is a match if the value of interest is equal to the value supplied in the case. In a switch statement, this is all there is. Because there are so many kinds of tests in full pattern matching, this post will use a two letter keyword to disambiguate each kind. For the equality test, the keyword <code>eq</code> will be used.</p>
+<p>Here is an example of a pattern match used only like a switch statement:</p>
+<div class="highlight"><pre><span></span><code>print(&quot;Pick a number between 1 and 10&quot;)
+number = Integer.parse(read()).or_die();
+
+magic_number = random.integer(1,10)
+
+switch number:
+  eq 0:
+    print(&quot;I said 1 and 10, not 0 and 9!&quot;)
+  eq magic_number:
+    print(&quot;You guessed my magic number!&quot;)
+  _:
+    print(&quot;You did not guess it.&quot;)
+</code></pre></div>
+<h2 id="instance-is">Instance (is)</h2>
+<p>The first kind of pattern matching that you will not see in non-functional programming languages is instance testing—testing that the value is an instance of a given type. By itself, this is really only useful if the language also has union types and flow-sensitive static typing. Say variable <code>x</code> has type <code>Integer|String</code>. If a case tests for <code>x</code> being type <code>String</code>, then the body will only be executed when <code>x</code> actually is a <code>String</code>, making it safe to assume <code>x</code> has a static type of <code>String</code> within the body of the case. Ceylon, with its flow-sensitive typing and union types, is the only language I have found that has <a href="https://web.archive.org/web/20141231224452/https://ceylon-lang.org/documentation/1.1/reference/statement/switch/">this kind of test</a>, but not full pattern matching. This post will use the keyword <code>is</code> to indicate instance tests.</p>
+<div class="highlight"><pre><span></span><code>def double(x: Integer|String):
+  switch x:
+    is Integer:
+      return 2*x
+    is String:
+      return x.concatenate_back(x)
+</code></pre></div>
+<p>It is rarely useful to test with <code>eq</code> and <code>is</code> in the same expression, because the type of the value being tested with <code>eq</code> is usually known. This assumes that the pattern matcher does not throw an error when comparing two incomparable types like String and Integer. In the example below, <code>is Integer</code> is pointless if <code>eq 0</code> is false for all values of <code>x</code> that are not <code>Integer</code>s. With implicit conversions, this could occasionally not be true.</p>
+<div class="highlight"><pre><span></span><code>switch x:
+  # Don&#39;t write code where `is Integer` is meaningful here
+  is Integer eq 0:
+    print(&quot;It&#39;s really zero&quot;)
+  _:
+    pass
+</code></pre></div>
+<h2 id="destructuring-to">Destructuring (to)</h2>
+<p>A quintessential part of pattern matching is destructuring. Destructuring breaks the value into components and then pattern matches on each of them. It is the recursive construct of pattern matching, but is not really a test in itself. The entire pattern matches only if each component matches its pattern. The value must be of a type that can be destructured. It is a type error to attempt to destructure a value that cannot be interpreted in this way, so usually destructuring is preceded by an instance check. This post will use the construct <code>to (...,...)</code> to perform destructuring.</p>
+<p>Note the patterns testing for equality inside the destructuring construct.</p>
+<div class="highlight"><pre><span></span><code>class Point(x, y)
+origin = Point(0.0, 0.0)
+
+class Line(b, m)
+
+if random.boolean():
+  shape = Point(3.0, 0.0)
+else:
+  shape = Line(0.0, 1.0)
+
+switch shape:
+  eq origin:
+    print(&quot;Point at origin&quot;)
+  is Point to (eq 0.0, _):
+    print(&quot;Point on x-axis&quot;)
+  is Point to (_, eq 0.0):
+    print(&quot;Point on y-axis&quot;)
+  is Line to (eq 0.0, _):
+    print(&quot;Line through origin&quot;)
+  _:
+    print(&quot;Something boring&quot;)
+</code></pre></div>
+<h2 id="assignment-as">Assignment (as)</h2>
+<p>Assignment is not a test at all, but binds the value of a component and assigns it to a name. It is nearly useless without destructuring, because the base value is the value being tested, which is usually assigned to a name already. The values bound are usually the components of a destructured value.  This post will use the keyword <code>as</code> to indicate a pattern of binding a value to a name. Other possible keywords are <code>val</code> or <code>let</code>.</p>
+<p>The values bound as usually referenced in the body of the case.</p>
+<div class="highlight"><pre><span></span><code>switch shape:
+  eq origin:
+    print(&quot;At origin&quot;)
+  is Point to (eq 0.0, as y):
+    print(&quot;On x-axis at {y}&quot;)
+  is Point to (as x, eq 0.0):
+    print(&quot;On y-axis at {x}&quot;)
+  is Line to (eq 0.0, as m):
+    print(&quot;Line through origin with slope {m}&quot;)
+  _:
+    print(&quot;Something boring&quot;)
+</code></pre></div>
+<h2 id="guards">Guards</h2>
+<p>Guards can seem like an afterthought to pattern matching because their behavior is so orthogonal. Guards are the front half of an if statement appended onto the end of a case. The case is only a match if the expression following the <code>if</code> keyword evaluates to <code>true</code>. Usually, the guards reference variables bound via <code>as</code>. Guards are strictly more powerful than <code>eq</code> alone because it allows us to compare destructured components to each other or switch on the members of components or apply arbitrary functions to components such as this:</p>
+<div class="highlight"><pre><span></span><code>switch shape:
+  as point is Point if distance_from_origin(point) &gt; 1:
+    print(&quot;Point outside unit circle&quot;)
+  is Point to (as x, as y) if x == y:
+    print(&quot;Point on 45 degree radius&quot;)
+  _:
+    pass
+</code></pre></div>
+<h2 id="other-uses-of-pattern-matching">Other Uses of Pattern Matching</h2>
+<p>Other than in a switch-like construct, pattern matching is used in overloading and variable assignment.</p>
+<p>Some programming languages use pattern matching to define overloaded functions. Once famous example is using it to define the factorial function. Because there is no inherent order to the overloaded methods, there needs to be some sort of overload priority resolution that says that <code>factorial(0)</code> calls the correct method even through <code>0</code> matches both.</p>
+<div class="highlight"><pre><span></span><code>def factorial(0):
+  return 1
+def factorial(n):
+ return n * factorial(n-1)
+</code></pre></div>
+<p>Note that this is just syntactic sugar for a single, non-overloaded function that pattern matches its parameters.</p>
+<div class="highlight"><pre><span></span><code>def factorial(n):
+  switch n:
+    eq 0:
+      return 1
+    _:
+      return n * factorial(n-1)
+</code></pre></div>
+<p>Some programming language also allow values to be pattern matched on assignment. Even Python, which <a href="https://peps.python.org/pep-3103/">does not even have a switch statement</a>, allow <a href="https://wrobstory.gitbooks.io/python-to-scala/content/tuples/README.html">tuple destucturing</a> like this: <code>x, y = my_tuple</code>. When doing an assignment it never makes sense to have tests (what would happen if they failed?). Therefore, assignment pattern matching is restricted to destructuring,  assignment, and otherwise.</p>
+<div class="highlight"><pre><span></span><code># Swap
+to (x, y) = [y, x]
+
+# Extract just the x
+to (x, _) = point
+</code></pre></div>
+<h2 id="simplification">Simplification</h2>
+<p>If you have ever used pattern matching in programming, you will notice that this syntax contains a lot more keywords than anything you have ever seen. There are six keywords. Can that be reduced a little bit? Is there any redundancy in the syntax? The short answer is that it can be reduced by one keyword without losing features or becoming ambiguous. The long answer is that most programming languages reduce it even more resulting in ambiguity and complex rules to resolve the ambiguity.</p>
+<p>Without losing any ambiguity, we can allow one kind of shorthand when an expression starts a pattern without a keyword. How is this bare expression interpretted so that the code can be made terser? Below are some possibilities.</p>
+<h3 id="eq-only">eq only</h3>
+<p>In C#, C++, and other non-functional languages, the switch statement only does equality testing, so a keyword is not required.</p>
+<p>In Ceylon, the switch statement does not do destructuring, assignment, or guards and <a href="https://web.archive.org/web/20221225101328/https://ceylon-lang.org/blog/2014/12/29/destructuring/">assignment only allows destructuring and assignment</a>. In Ceylon, a bare expression in a switch is interpreted as an equality test and a bare expression in an assignment is interpreted as an assignment.</p>
+<h3 id="eq-on-literals">eq on literals</h3>
+<p>In every language I have seen, <code>eq</code> is dropped on literals. Because <code>is 0.0</code> and <code>as 0.0</code> make no sense, we know that a bare <code>0.0</code> must refer to <code>eq 0.0</code>. In fact, most languages provide no mechanism for equality testing other than literals—the general <code>eq</code> operation does not exist. Languages with full pattern matching allow guards to be used in place of equality testing against variables; a value to be tested is captured in a name and then tested for equality in the guard.</p>
+<p>This may not be a good idea for one special reason: referential transparency. Referential transparency means that an expression can be replaced by its value. In a referentially transparent language, <code>f(2.0)</code> is always the same as <code>x=2.0; f(x)</code>. If we allow for the <code>eq</code> to be dropped before literals, then replacing those literals with a name of the same value will result in an error. Being able to rely on referential transparency makes it easier to reason about how a programming is working. Nevertheless, dropping <code>eq</code> on literals is a popular choice. Scala, F#, Haskell, and Rust all sacrifice referential transparency to make matching literals easier.</p>
+<p>The following two definitions are equivalent, showing how <code>eq</code> can be eliminated entirely.</p>
+<div class="highlight"><pre><span></span><code>def is_zero(x: Integer):
+  eq 0:
+    return true
+  _:
+    return false
+
+def is_zero(x: Integer):
+  zero = 0
+  as temp if temp == zero:
+    return true
+  _:
+    return false
+</code></pre></div>
+<h3 id="as-outside-pattern-matching">as outside pattern matching</h3>
+<p>Programming languages that allow pattern matching in assignment usually have bare identifiers interpreted as assignments. Instance testing, equality testing, and guards make no sense in this context so there no chance of ambiguity.</p>
+<h3 id="is-and-to-combo">is and to combo</h3>
+<p>It may be tempting to drop <code>to</code> also in addition to <code>eq</code> or <code>is</code> or <code>as</code>, especially if <code>(something, something)</code> is not a legal expression in the language. This cannot be done ambiguously, because the one-element destructuring <code>(something)</code> is undoubtedly legal syntax as simple unnecessary parentheses. It is clear that <code>(A, B)</code> means <code>to (A, B)</code>, but does <code>(A)</code> mean <code>to (A)</code> or <code>is A</code>? Technically, it is the parentheses that are unnecessary, but who wants to write <code>Point to x, y</code>?</p>
+<p>We could take advantage of the fact that destructuring is almost useless without an instance check beforehand. Let's try a hybrid approach and interpret all patterns starting with <code>Name(...)</code> as <code>is Name to (...)</code>. This is not the same as dropping <code>is</code> entirely because <code>Name(...)</code> could be a function call returning either a type, unless types are not first class objects in the language and cannot be returned from functions.</p>
+<p>This syntax is almost universal among functional programming languages because it is almost entirely how algebraic data types are used in pattern matching. For example, here is how one would use the <code>Option</code> data type:</p>
+<div class="highlight"><pre><span></span><code>print(&quot;What&#39;s your favorite number?&quot;)
+integer = Integer.parse(read())
+# Type of integer is Option[Integer]
+
+switch integer:
+  Some(7):
+    print(&quot;That&#39;s my favorite number too!&quot;)
+  Some(as value):
+    print(&quot;I am ok with {value}&quot;)
+  None:
+    print(&quot;That&#39;s not a number!&quot;)
+</code></pre></div>
+<h3 id="lowercase-as-and-uppercase-is">lowercase as and uppercase is</h3>
+<p>By using the <code>is</code>/<code>to</code> combo and restricting <code>eq</code> to literals and guards, we can get rid of the <code>is</code>, <code>to</code>, and <code>eq</code> keywords, leaving only <code>as</code>. Even with <code>eq</code> gone, we cannot get rid of <code>as</code> without introducing ambiguity. When we write <code>A</code>, does that mean <code>is A</code> or <code>as A</code>. Nevertheless, most of the full-featured pattern matching languages eliminate it, introducing some of the weirdest corner cases in programming history. They parse a lowercase identifier (like <code>name</code>) as a binding and parse an uppercase identifier (like <code>Name</code>) as an instance test. In languages where types must begin with a capital letter, like Haskell and Ceylon, it is not a big deal. However, in languages where this is the only place where capitalization matters, like Scala and F#, <a href="https://lampwww.epfl.ch/~michelou/scala/scala-pitfalls.html">it</a> <a href="https://stackoverflow.com/questions/7078022/why-does-pattern-matching-in-scala-not-work-with-variables">is</a> <a href="https://stackoverflow.com/questions/4479474/scala-pattern-matching-with-lowercase-variable-name">particularly</a> <a href="https://web.archive.org/web/20181221065731/https://mergeconflict.com/scala-rage-pattern-matching/">jarring</a>.</p>
+<h3 id="type-is-and-object-eq">type is and object eq</h3>
+<p>One possibility that I have never implemented is to switch between the behaviors of <code>is</code> and <code>eq</code> based on whether or not the pattern is a type. If the name refers to a type, then it is likely the user intends to test if the value is an instance. Testing if a value is equal to a type is pretty rare. Similarly, if the name refers to an object that is not a type, then it is likely the user intends to test for equality, as an instance test would be an error.</p>
+<div class="highlight"><pre><span></span><code>a = 0
+b = Integer
+
+switch obj:
+  a: # eq a
+    print(&quot;Found the zero&quot;)
+  b: # is b
+    print(&quot;Nonzero&quot;)
+</code></pre></div>
+<p>This can be interpreted as requiring a type and always doing an <code>is</code> comparison, but having an implicit conversion from any object to a singleton type. It is a good principle to avoid general implicit conversions because it easily masks errors. Scala <a href="https://github.com/scala/bug/issues/194">learned this the hard way</a> by including a conversion from Any to String.</p>
+<p>This could also be done based on the runtime type of the pattern, but that would be even weirder. A pattern that is usually compared via <code>eq</code> would suddenly compare via <code>is</code> if the object happened to also be a type.</p>
+<h3 id="type-is-and-object-eq-and-undefined-as">type is and object eq and undefined as</h3>
+<p>An extension to the previous technique would be to use <code>as</code> whenever the name was undefined, because that is the only right thing to do when the name has no value.</p>
+<div class="highlight"><pre><span></span><code>a = Some
+b = none # an object
+
+switch obj:
+  a(c): # is a to (as c)
+    print(&quot;Some contains {c}&quot;)
+  b: # eq none
+    print(&quot;None&quot;)
+</code></pre></div>
+<p>This solution has the additional problem that defining a top-level class or other object would silently and subtly alter the behavior of pattern matches using that name as assignment. For saving characters, this solution is a dream. For saving one's sanity, not so much.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>It is kind of difficult to render a judgment on this one. The full syntax is too verbose for simple cases, but the choices made by other programming languages lead to weird corner cases. I think the <code>is</code>/<code>to</code> combo is a great choice for the behavior of a bare expression. And despite the loss of referential transparency, I think equality should be applied to literals. This is also because literals interact differently with an exhaustiveness checker than variables with the same value. An <a href="https://fsharpforfunandprofit.com/posts/correctness-exhaustive-pattern-matching/">exhaustiveness checker</a> is something that I did not talk about, but it is an important aspect of pattern matching. I think all six keywords should be retained to allow for unambiguous definitions when necessary.</p>
+<p>Testing for equality of non-literals is actually pretty rare (because it interacts poorly with exhaustiveness checking), so shortening the syntax for it seems wasteful. In fact, by having the <code>eq</code> keyword, I already make it shorter than most other languages which require that equality testing be done with guards.</p>
+<p>Under no circumstances would I choose to have the case of the first letter be significant. Users of any language I design will have to suck it up and use a keyword to assign a value. I am not sure why this is considered so burdensome. In all languages with both block scoping and mutability, the programmer has to use a keyword (like <code>val</code> or <code>var</code>) to declare every other variable in the program. Why not those declared in pattern matchers? In my world, pattern matching would look something like this:</p>
+<div class="highlight"><pre><span></span><code>switch shape:
+  eq origin:
+    print(&quot;At origin&quot;)
+  Point(0.0, val y):
+    print(&quot;On x-axis at {y}&quot;)
+  Point(val x, 0.0):
+    print(&quot;On y-axis at {x}&quot;)
+  Point(val x, val y) if x == y:
+    print(&quot;Point on diagonal&quot;)
+  Line(0.0, val m):
+    print(&quot;Line through origin with slope {m}&quot;)
+  _:
+    print(&quot;Something boring&quot;)
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; David R Hagen. Content available under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC-BY</a> license.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/drhagen" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://stackoverflow.com/users/1485877/drhagen" target="_blank" rel="noopener" title="stackoverflow.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M290.7 311 95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/drhagen" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/davidrhagen/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
