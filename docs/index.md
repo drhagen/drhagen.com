@@ -1,3 +1,7 @@
+---
+icon: material/home
+---
+
 # David R Hagen
 
 > Statistics is math.

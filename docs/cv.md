@@ -1,3 +1,7 @@
+---
+icon: material/list-box
+---
+
 # CV
 
 ## Education

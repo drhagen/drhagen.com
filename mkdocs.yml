@@ -12,7 +12,7 @@ theme:
   custom_dir: overrides
 
   icon:
-    logo: fontawesome/solid/rocket
+    logo: material/chart-bell-curve
 
   palette:
     - scheme: default
