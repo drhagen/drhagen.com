@@ -1,0 +1,32 @@
+{% if page.file.src_uri.startswith('blog/posts/') %}
+<!--  Disqus needs `color-scheme: light;` as the base color scheme -->
+<div id="disqus_thread" style="color-scheme: light;"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://drhagen.com{{ page.abs_url }}';
+    };
+
+    (function () {
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://drhagen.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+    document.addEventListener('DOMContentLoaded', function (e) {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            // Instruct Disqus to reload after theme change
+            DISQUS.reset({ reload: true, config: disqus_config });
+        });
+    });
+</script>
+<noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+    </a>
+</noscript>
+{% endif %}

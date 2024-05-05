@@ -9,6 +9,7 @@ copyright: >
 
 theme:
   name: material
+  custom_dir: overrides
 
   icon:
     logo: fontawesome/solid/rocket
