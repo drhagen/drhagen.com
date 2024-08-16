@@ -93,7 +93,7 @@ David R Hagen and Bruce Tidor, "A Computational Experimental Design Method for E
 
 David R Hagen and Bruce Tidor, "[Efficient Bayesian Estimates for Discrimination among Topologically Different Systems Biology Models](https://pubs.rsc.org/en/Content/ArticleLanding/2014/MB/C4MB00276H)", _Molecular BioSystems_, 2015.
 
-David R Hagen, "[Parameter and Topology Uncertainty for Optimal Experimental Design](https://drhagen.com/documents/DavidRHagenDoctoralThesis.pdf)", MIT Doctoral Thesis, 2014.
+David R Hagen, "[Parameter and Topology Uncertainty for Optimal Experimental Design](./documents/DavidRHagenDoctoralThesis.pdf)", MIT Doctoral Thesis, 2014.
 
 David R Hagen, Jacob K White, and Bruce Tidor, "[Convergence in parameters and predictions using computational experimental design](https://rsfs.royalsocietypublishing.org/content/3/4/20130008.full)", _Interface Focus_, 2013.
 
