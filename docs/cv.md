@@ -20,15 +20,15 @@ Graduated valedictorian with 4.0 GPA
 
 - Software Engineering: in particular, the data structures representing scientific workflows and the architecture to execute those workflows
 
-- Statistics: in particular, information theory and Bayesian theory with an appreciation for the importance of understanding the assumptions behind the techniques being applied
+- Statistics: in particular, information theory and Bayesian statistics with an appreciation for the importance of understanding the assumptions behind the techniques being applied
 
 - Programming: Python, Matlab, and R; also Bash and C; past proficiency in Scala and C#
 
-- Cloud computing: in particular, autoscaled dockerized deployments and high performance computing on a custom job scheduler on AWS
+- Cloud computing: in particular, dockerized deployments and high performance computing in AWS
 
 ## Career History
 
-### Software Engineer, *Applied BioMath*, 2017–present
+### Software Engineer, *Applied BioMath / Certara*, 2017–present
 
 **Director of Engineering**, Feb 2023–present
 
@@ -38,7 +38,25 @@ Graduated valedictorian with 4.0 GPA
 
 **Principal Software Engineer**, Jun 2017–Sep 2020
 
-- Design and implementation of web applications for pharmaceutical modeling
+- Designed, architected, and managed the development of the Applied BioMath quantitative systems pharmacology (QSP) modeling platform, which was acquired by Certara in Dec 2023
+
+- Oversaw the roll-out of the software platform to enthusiastic scientists as it replaced all internal usage of Matlab for systems pharmacology
+
+- Replaced Django with FastAPI to provide a lower-maintenance backend for the platform
+
+- Containerized the platform with Docker and deployed it to AWS using Terraform, eliminating reproducibility and scalability issues associated with running code on scientists' laptops
+
+- Designed and implemented the parsing, validation, and compilation of four model text file formats to improve the productivity of modelers with progressively more expressive modeling domain-specific languages (DSLs)
+
+- Directed the development of a core simulation engine in C, wrapping the SUNDIALS ODE solver library, achieving a 100x single-threaded performance improvement over the existing modeling tool, which enabled virtual patient population simulations on a large immuno-oncology consortium model that were previously intractable
+
+- Designed and implemented a data grammar library in NumPy, exposing it via an API to replace specialized post-processing steps with customizable user-defined data pipelines
+
+- Designed and implemented an expressions library to process models with arbitrary user-defined expressions, lower them to C code, compile them on-the-fly, and execute them as machine code for maximum performance
+
+- Designed and implemented type checking, including units, across the API, ensuring consistency within models, across simulations, and through the data grammar pipelines, nearly eliminating unit errors from modeling reports
+
+- Designed a custom job scheduler in asynchronous Python, reducing the latency of interactive jobs by 20x over Celery/Rabbit
 
 ### Data Scientist, *Merck*, 2014–2017
 
