@@ -1,17 +1,17 @@
-[tool.poetry]
+[project]
 name = "drhagen.com"
 version = "0.0.0"
 description = ""
-authors = ["David Hagen <david@drhagen.com>"]
-license = "CC-BY"
+authors = [
+    {name = "David Hagen", email = "david@drhagen.com"}
+]
+license = "CC-BY-4.0"
 readme = "README.md"
-package-mode = false
+requires-python = "==3.12.*"
+dependencies = [
+    "mkdocs-material == 9.*",
+    "mkdocs-rss-plugin == 1.*",
+]
 
-[tool.poetry.dependencies]
-python = "~3.12"
-mkdocs-material = "^9"
-mkdocs-rss-plugin = "^1"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+python-preference = "only-managed"
