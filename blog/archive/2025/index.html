@@ -12,7 +12,7 @@
         <meta name="author" content="David Hagen">
       
       
-        <link rel="canonical" href="https://drhagen.com/blog/category/programming/">
+        <link rel="canonical" href="https://drhagen.com/blog/archive/2025/">
       
       
       
@@ -28,7 +28,7 @@
     
     
       
-        <title>programming - David R Hagen</title>
+        <title>2025 - David R Hagen</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#programming" class="md-skip">
+        <a href="#2025" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              programming
+              2025
             
           </span>
         </div>
@@ -388,7 +388,7 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="programming">programming</h1>
+        <h1 id="2025">2025</h1>
       </header>
       
         <article class="md-post md-post--excerpt">
@@ -397,18 +397,18 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-03-25 00:00:00+00:00">March 25, 2023</time></li>
+          <time datetime="2025-11-28 00:00:00+00:00">November 28, 2025</time></li>
         
           <li class="md-meta__item">
             in
             
-              <a href="./" class="md-meta__link">programming</a></li>
+              <a href="../../category/calendars/" class="md-meta__link">calendars</a></li>
         
         
           
           <li class="md-meta__item">
             
-              7 min read
+              6 min read
             
           </li>
         
@@ -418,391 +418,12 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="excellent-error-messages"><a class="toclink" href="../../excellent-error-messages/">Excellent error messages</a></h2>
-<p>Error messages are pervasive throughout programming, yet little has been written on the design of error messages for languages, libraries, and APIs. Much good advice can be found via simple web search on good error messages as shown to end users in GUIs, but standards for error messages intended for an audience of programmers is hard to find. This is not due to a lack of attention to error messages. There are certainly places where error messages are neglected, but neglect is far from universal. In fact, some of the best discussions on good error messages come from specific efforts by big projects to improve their error messages.</p>
+    <h2 id="the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right"><a class="toclink" href="../../the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/">The Phase of the Day: Something else the Gregorian Calendar Gets Right</a></h2>
+<p>In the last calendars post, we concluded that <a href="../../leap-years-something-the-gregorian-calendar-gets-right/">days and years were the proper periods for a calendar</a>. But their underlying natural phenomena are cycles without beginning and without end. To be useful in a calendar, we need to be able to put particular events on particular days and years. We need to be able to count and label days and years. To do that, we need to pick a dividing line between one day and the next, between one year and the next. When does one day start and one day end? When does one year roll over to the next? We'll call these properties the phases of our days and years. For the phase of the day, we'll find that the Gregorian calendar once again gets something spot on.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../excellent-error-messages/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-03-06 00:00:00+00:00">March 6, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-sort-within-groups-problem"><a class="toclink" href="../../the-sort-within-groups-problem/">The sort-within-groups problem</a></h2>
-<p>There is an interesting edge case in data grammars when a grouped data table is sorted by non-group columns. For example, what should the following dplyr code produce?</p>
-<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-
-<span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
-<span class="w">  </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">group_by</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">arrange</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-</code></pre></div>
-
-    
-      <nav class="md-post__action">
-        <a href="../../the-sort-within-groups-problem/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2018-12-10 00:00:00+00:00">December 10, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="multidimensional-pairing-functions"><a class="toclink" href="../../multidimensional-pairing-functions/">Multidimensional Pairing Functions</a></h2>
-<p>In the <a href="../../superior-pairing-function/">previous post</a>, I compared ways to take two infinite streams and generate a new stream that is all possible combinations of the elements in those streams. This post takes it up another level and generalizes this procedure to an arbitrarily long list of infinite streams. This is a trickier task than the 2-dimensional case, utilizing recursion into each dimension to cleanly generate all combinations.</p>
-<p>Throughout this post, the caret <code>^</code> will indicate exponentiation and parentheses <code>list(index)</code> will be used to indicate indexing a list. As before, 0-indexing will be used because it makes the math simpler. </p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../multidimensional-pairing-functions/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2018-03-27 00:00:00+00:00">March 27, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              11 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="superior-pairing-function"><a class="toclink" href="../../superior-pairing-function/">Superior Pairing Function</a></h2>
-<p>Given two sequences of objects, it is often desirable to generate a sequence which is all possible pairwise combinations of those sequences—the Cartesian product. If the sequences are finite in length, then it is a trivial function to write in any programming language. The function even exists in many standard libraries and packages, such as <code>itertools.product</code> in Python. But if the sequences are infinite in length (that is, they are streams rather than arrays, depending on your terminology), the typical approach fails. Finding a way to iterate over all pairs of two infinitely long sequences is called a "pairing function" in mathematics and has practical uses. There are some existing pairing functions, but many have limitations. I describe the properties of a superior pairing function and a couple of methods that satisfy them.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../superior-pairing-function/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2016-06-10 00:00:00+00:00">June 10, 2016</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              11 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="marginal-vs-conditional-subtyping"><a class="toclink" href="../../marginal-vs-conditional-subtyping/">Marginal vs. Conditional Subtyping</a></h2>
-<p>In computer programming, a type is a just a set of objects—not a physical set of objects in memory, but a conceptual set of objects. The type <code>Integer</code> is the set <code>{0, 1, -1, ...}</code>. Types are used to reason about the correctness of programs. A function that accepts an argument of type <code>Integer</code>, will work for any value <code>0</code>, <code>1</code>, <code>-1</code>, etc., for some definition of "works". Subtyping is used to define relationships between types. Type <code>B</code> is a subset of a type <code>A</code> if the set of objects defined by <code>B</code> is a subset of the objects defined by <code>A</code>. Every function that works on an instance of <code>A</code> also works on an instance of <code>B</code>, for some definition of "works". If we were just doing math, subsets would be the end of subtyping. But types as pure sets exist only conceptually. Actual types must be concretely defined. It is not very efficient to define the <code>Integer</code> class by writing all possible <code>Integer</code>s! In most programs, the possible values of a type are constrained by their fields. Subtypes and supertypes typically differ by having more or fewer fields than the other. Sometimes, the subtype has more fields, and sometimes, the supertype has more fields. Many of you may be thinking, "What? It's always one way, not the other!" The funny thing is that some of you think the subtype always has more fields and others think the supertype always has more fields. That's because there are two kinds of subtyping. The first is what I call "marginal subtyping", which is encountered in application programming and is well modeled by inheritance. The second is what I call "conditional subtyping", which is encountered in mathematical programming and is well modeled by implicit conversions. Depending on the genre of programming you work in, the other kind of subtyping may be unknown and the language features needed to implement it may be maligned. But both needs are real and both features are necessary.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../marginal-vs-conditional-subtyping/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-09-14 00:00:00+00:00">September 14, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              12 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="sane-equality"><a class="toclink" href="../../sane-equality/">Sane Equality</a></h2>
-<p>Equality: every programming language has it, the <code>==</code> syntax is as universal as <code>1+1</code>, and it works almost the same in every language. When the left and right operands are the same type, equality is easy. No one questions that <code>1==1</code> evaluates to <code>true</code> or that <code>"a"=="b"</code> evaluates to <code>false</code>. This post is about what to do when the operands are different types. What should <code>1=="1"</code> be? Or what should <code>Circle(1,2,2)==Point(1,2)</code> be? Or what should <code>ColoredPoint(1,2,red)==Point(1,2)</code> be?</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../sane-equality/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-09-04 00:00:00+00:00">September 4, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="when-sequences-go-bad"><a class="toclink" href="../../when-sequences-go-bad/">When Sequences Go Bad</a></h2>
-<p>In my <a href="../../one-sided-debate-over-sequence-syntax/">last post</a>, I talked about the various kinds of syntax for getting and setting elements in sequences. This post will talk about semantics. What exactly should <code>get</code> and <code>mutate</code> do when invoked? What should happen when the index is valid is hopefully obvious. But because we have to handle the case of an invalid index—in particular, an index larger than the length of the sequence, the answer is not as clear-cut as it may seem. If "throw an exception" is the only thing that comes to mind, you have been stuck in procedural programming for too long.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../when-sequences-go-bad/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-05-09 00:00:00+00:00">May 9, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="one-sided-debate-over-sequence-syntax"><a class="toclink" href="../../one-sided-debate-over-sequence-syntax/">One-Sided Debate over Sequence Syntax</a></h2>
-<p>Computers are <a href="https://www.benshoemate.com/2008/11/30/einstein-never-said-that/">famously stupid machines</a>. You have to tell them in perfect detail not just what you want them to do but how to do it. A computer may be able to add 1 and 2 faster than I can, but it will take me longer to tell it to do that than for me to do it myself. The more complex the task, the more time it takes to code. Coding is still laborious and entirely not worth it unless such code will be used many times. I posit that a computer is only useful for doing work when the vast majority of the work to be done is repetitive tasks on simple objects. The most common abstraction for representing a bunch of objects is the sequence (also known as a list or array), in which each object in the collection is associated with an integer called its index. There is a wide diversity of syntax and semantics for accessing and changing sequences.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../one-sided-debate-over-sequence-syntax/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-03-07 00:00:00+00:00">March 7, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              11 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="difficulty-of-pattern-matching-syntax"><a class="toclink" href="../../difficulty-of-pattern-matching-syntax/">Difficulty of Pattern Matching Syntax</a></h2>
-<p>Pattern matching is compact syntax, originating in functional programming languages, that acts a super-charged switch statement, allowing one to concisely branch on the types and components of a value of interest. Like a traditional switch statement, a pattern match takes a single object and compares it to sequence of cases, running the code body associated with the matching case. There are many parts to a pattern matcher. and design concise and unambiguous syntax is a difficult endeavor, one failed by many popular programming languages.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../difficulty-of-pattern-matching-syntax/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2014-12-29 00:00:00+00:00">December 29, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">programming</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="comparison-of-iteration-styles-in-programming"><a class="toclink" href="../../comparison-of-iteration-styles-in-programming/">Comparison of Iteration Styles in Programming</a></h2>
-<p>It is difficult to overstate the importance of iteration in programming—the process performing an operation on each element of a list. I would rank only variable assignment, functions calling, and branching as more important. Unlike the <code>if</code> statement, which is essentially the same in every language, the semantics of the <code>for</code> loop varies across languages. Mainly for my own future reference, this post compares the various styles of iteration that I have come across. The examples are in pseudo code which is the only way to write so many different iteration styles under similar syntax. Each of the examples is trying to do the same thing: print out each element of a list called <code>list</code>.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../comparison-of-iteration-styles-in-programming/">
+        <a href="../../the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/">
           Continue reading
         </a>
       </nav>
