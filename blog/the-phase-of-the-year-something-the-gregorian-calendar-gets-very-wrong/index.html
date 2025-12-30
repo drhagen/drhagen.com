@@ -12,13 +12,11 @@
         <meta name="author" content="David Hagen">
       
       
-        <link rel="canonical" href="https://drhagen.com/blog/the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/">
+        <link rel="canonical" href="https://drhagen.com/blog/the-phase-of-the-year-something-the-gregorian-calendar-gets-very-wrong/">
       
       
-        <link rel="prev" href="../excellent-error-messages/">
+        <link rel="prev" href="../the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/">
       
-      
-        <link rel="next" href="../the-phase-of-the-year-something-the-gregorian-calendar-gets-very-wrong/">
       
       
         
@@ -32,7 +30,7 @@
     
     
       
-        <title>The Phase of the Day: Something else the Gregorian Calendar Gets Right - David R Hagen</title>
+        <title>The Phase of the Year: Something the Gregorian Calendar Gets Very Wrong - David R Hagen</title>
       
     
     
@@ -83,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sunrise" class="md-skip">
+        <a href="#agriculture" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Phase of the Day: Something else the Gregorian Calendar Gets Right
+              The Phase of the Year: Something the Gregorian Calendar Gets Very Wrong
             
           </span>
         </div>
@@ -393,10 +391,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sunrise" class="md-nav__link">
+  <a href="#agriculture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sunrise
+        Agriculture
       
     </span>
   </a>
@@ -404,10 +402,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sunset" class="md-nav__link">
+  <a href="#seasonal-alignment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sunset
+        Seasonal alignment
       
     </span>
   </a>
@@ -415,10 +413,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#midnight" class="md-nav__link">
+  <a href="#zodiacal-alignment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Midnight
+        Zodiacal alignment
       
     </span>
   </a>
@@ -426,10 +424,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#gregorian-calendar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusion
+        Gregorian calendar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-best-we-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The best we can do
       
     </span>
   </a>
@@ -473,7 +482,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-11-28 00:00:00+00:00" class="md-ellipsis">November 28, 2025</time>
+                        <time datetime="2025-12-30 00:00:00+00:00" class="md-ellipsis">December 30, 2025</time>
                       </div>
                     </li>
                     
@@ -495,7 +504,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              8 min read
                             
                           </span>
                         </div>
@@ -519,31 +528,39 @@
 
 
 
-  <h1>The Phase of the Day: Something else the Gregorian Calendar Gets Right</h1>
+  <h1>The Phase of the Year: Something the Gregorian Calendar Gets Very Wrong</h1>
 
-<p>In the last calendars post, we concluded that <a href="../leap-years-something-the-gregorian-calendar-gets-right/">days and years were the proper periods for a calendar</a>. But their underlying natural phenomena are cycles without beginning and without end. To be useful in a calendar, we need to be able to put particular events on particular days and years. We need to be able to count and label days and years. To do that, we need to pick a dividing line between one day and the next, between one year and the next. When does one day start and one day end? When does one year roll over to the next? We'll call these properties the phases of our days and years. For the phase of the day, we'll find that the Gregorian calendar once again gets something spot on.</p>
+<p>In the first article of the series, we concluded that <a href="../leap-years-something-the-gregorian-calendar-gets-right/">days and years are the appropriate periods of our calendar</a>. In the second article, we determined the optimal phase of the day. <a href="../the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/">Each day should begin and end on midnight</a> because of its astronomical relevance and biological convenience. That leaves us with the phase of the year. The period of our year is already synchronized with the seasons. We just need to decide where among the seasons we should divide one year and the next. This is the first time, though not the last, that we will find that the Gregorian calendar falls over completely.</p>
 <!-- more -->
 
-<p>The spinning of the Earth causes each day to cycle through two phases, one confusingly <a href="https://biblehub.com/genesis/1-5.htm">called</a> "day" and the other "night". Our species' natural sleep cycle is aligned with this day-night cycle and provides a natural starting point for the definition of a day. With the exception of those constrained by occupation to a night shift, we go unconscious for eight hours mostly within the night portion of the daily cycle wherever we live. For each of us personally, our "day" begins when we wake up and ends when we go to sleep. This being largely coordinated with those near us provides a constraint on where we could reasonably put the divider between one day and the next. A universal divider between the days should occur while the bulk of us are asleep, which naturally occurs sometime at night.</p>
-<p>As far as I could find, no culture has ever put the dividing line between days anytime between sunrise and sunset. One possible deviation is <a href="https://en.wikipedia.org/wiki/Astronomical_day">historical astronomers</a>, who switched days at solar zenith (noon). As astronomy was a historically nighttime activity, this seems more like an exception that proves the rule and suggests how a nocturnal species might choose to delineate its days (nights?).</p>
-<p>As a diurnal species, it seems we have settled on three possibilities: the day starts at sunset, the day starts at sunrise, or the day starts at solar nadir (midnight). The <a href="https://www.jtsa.edu/torah/the-day-begins-with-night/">Jewish</a> and <a href="https://www.moonsighting.org.uk/publication/news/when-is-the-start-of-the-islamic-day-and-week.html">Islamic</a> days go from sunset to sunset. The <a href="https://www.quora.com/At-what-time-does-a-day-start-according-to-the-Hindu-calendar">Hindu</a> days run from sunrise to sunrise. The European and <a href="https://www.britannica.com/story/year-of-the-monkey-spotlight">Chinese</a> days change over at solar nadir (midnight).</p>
-<p>In my research, I found a lot of fuzziness and uncertainty around the sunrise and sunset definitions. It seems that it may be most natural to count the start of the day at sunrise, the end of the day at sunset, and the night being <em>not part of any particular day</em>. I'm guessing that in a world before electrical lighting, little happened and even less was scheduled during the night, so it didn't matter much. The need to consistently assign every particular minute of the night to one particular day or the other is a post-industrial habit that our ancestors might find a tad obsessive.</p>
-<h2 id="sunrise">Sunrise</h2>
-<p>Everywhere on Earth gets 12 hours of daylight, on average. Everywhere on Earth, the sun rises at 6 AM, on average, ignoring timezones. That would seem to be a useful universal, except that "average" is doing a lot of work here.</p>
-<p>Because of the tilt of the earth, the time from sunrise to sunrise is shorter in the winter and spring as the days get longer, and the time between sunrises is longer in summer and fall as the days get shorter. Depending on your latitude, this can accumulate to a very large change. At my latitude, the sun rises about an hour and a half before the average on the summer solstice and rises about an hour and a half later than the average on the winter solstice. Higher latitudes experience more extreme shifts. While the average sunrise may be 6 AM everywhere, the actual sunrise moves ahead and behind with the seasons everywhere except the equator.</p>
-<p>Assuming that we don't want the length of the day to change every day, we have little choice but to declare the mean sunrise as the "civil sunrise" and the start of the day. But then for half the year, the day is very much flipping over during daylight, which is something we decided earlier was the only truly unnatural time to do it.</p>
-<p>Perhaps in a post-electrical world it is not that big of a deal. We are not as driven by the sun as our ancestors. The sun may rise at 5 AM, but I'm still sleeping in. (This is not strictly true. Daylight saving time moves sunrise in this case back to 6 AM on the clock, which is a topic for another time.)</p>
-<h2 id="sunset">Sunset</h2>
-<p>Sunset makes even less sense to me. I am actually amazed that several cultures ended up with this convention. It drifts throughout the solar day just like sunrise, but has one additional drawback. There are about 12 hours of daylight, but humans sleep only about 8 hours. We put as many of those sleeping hours during the night, but that still leaves 4 night hours that we are typically awake for. With these extra hours, we tend to stay up late rather than get up early. This effect is so strong, it must be for biological reasons. As much as we may talk about night owls vs morning larks, going to sleep at 10 PM and waking up at 6 AM is wildly more common than going to sleep at 6 PM and waking up 2 AM, even though these are symmetric sleep schedules about the nadir. From a purely objective standpoint, humans are night owls.</p>
-<p>Because of this bias, switching over the day at sunset invariably switches the day while almost everyone is awake and in the middle of doing things year round. Perhaps this makes sense as a religious calendar. You can have fasting days that don't actually require you to go a day without food. But as a civil calendar, this is confusing.</p>
-<p>If we all lived on the equator or if the Earth had no tilt, it could make sense to have sunrise or sunset be the dividing line between two days. In either of those cases, the sun always rises and sets at the same time. But with the current planet and population distribution upon it, this cannot be made to work.</p>
-<h2 id="midnight">Midnight</h2>
-<p>Our eight-hour sleeping habits do not all perfectly overlap. And as mentioned above, there is a bias toward sleeping later rather than earlier in the night. Nevertheless, the window from midnight to 4 AM is a pretty clean deadzone. From a pure perspective of inactivity, 2 AM or 3 AM may make more sense. We switch over daylight saving time at 2 AM for this reason. But there is no astronomical meaning to 2 AM or 3 AM; it's just arbitrary.</p>
-<p>Midnight is unique in that it is the sun's nadir, the time when the sun is at its lowest point in the sky. And fortunately for the purpose of making a regular calendar, there is the same amount of time between every nadir.</p>
-<p>Actually, that is not strictly true. A perfectly constant period between nadirs rests on three assumptions: (1) that the period of the Earth rotation is constant, (2) that the revolution of the Earth around the sun is constant, and (3) that no other process is driving the sun higher or lower in the sky. Inaccuracies in the first assumption are on the order of milliseconds and can only be detected with atomic clocks. Inaccuracies in the second assumption contribute to variations on the order of minutes. The Earth orbit is slightly elliptical, which causes it to travel faster at some times than at others. Inaccuracies in the third assumption also contribute on the order of minutes. Because the path of the sun itself gets higher and lower with the seasons, it takes different amounts of time to reach its zenith and its nadir. Overall, the last two effects combine and the <a href="https://explainingscience.org/2015/08/24/september-18-the-shortest-day/">length of the solar day varies up to 15 minutes above and below the mean solar day</a>.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>It seems that the Gregorian calendar's division of the day, at midnight, is about as good as we can make it. This puts the division in a natural spot in our biological cycle while also aligning the day with an appropriate astronomical phenomenon.</p>
-<p>There is one rather large wrinkle in this design though. It isn't midnight at the same time everywhere on the planet, but time zones are a topic for another time.</p>
+<h2 id="agriculture">Agriculture</h2>
+<p>We are not a hibernating species, so unlike the day, there is no obvious coordination point where we are all sleeping in which we could put the start of the year. That being said, the earliest calendars were mostly maintained for agricultural reasons. As such, calendars from around the world tend to flip over sometime before sowing and after reaping.</p>
+<p>The growing season varies wildly across the Earth. This goes beyond the fact that the seasons of the northern and southern hemispheres are six months out of sync with each other. Even in the same hemisphere, the agricultural cycles can be many months out of sync. The <a href="https://en.wikipedia.org/wiki/Roman_calendar">ancient Roman calendar</a> starts in March, to reflect the time of planting in Italy. The <a href="https://en.wikipedia.org/wiki/Hebrew_calendar">Jewish calendar</a> starts in October to reflect the <a href="https://bible-menorah.jimdofree.com/english/calendar-and-feasts/barley-wheat-harvest-israel/">start of the sowing season in Israel</a>. The Chinese calendar starts in January or February, just before <a href="https://en.wikipedia.org/wiki/Rice_production_in_China#Growing_seasons">the spring sowing season in China</a>.</p>
+<p>One could argue that agriculture is no longer a relevant factor in building a civil calendar. The fraction of our species's labor committed to agriculture has fallen substantially since the Industrial Revolution. With the <a href="https://usinfo.org/enus/economy/overview/bizCh5.html#:~:text=At%20the%20time%20of%20the,is%20less%20than%202%20percent.">USA as an example</a>, 95% of its population worked in agriculture in the 1700s, but that has fallen to 2% in the 2000s. Agricultural considerations no longer drive our civilization, and we may be prudent to drop it from consideration like we did the phases of the moon in the first article.</p>
+<h2 id="seasonal-alignment">Seasonal alignment</h2>
+<p>There are four obvious alignment points for a solar calendar: the winter and summer solstices and the spring and autumn equinoxes. This is not without precedent. The <a href="https://en.wikipedia.org/wiki/Iranian_calendars">Iranian</a> and <a href="https://en.wikipedia.org/wiki/Indian_national_calendar">Indian</a> calendars start on the spring equinox. The <a href="https://en.wikipedia.org/wiki/French_Republican_calendar">French Republican calendar</a> starts on the autumn equinox.</p>
+<p>Solar calendars don't have to start with any astronomically meaningful event. The <a href="https://en.wikipedia.org/wiki/Gregorian_calendar">Gregorian</a> and <a href="https://en.wikipedia.org/wiki/Bengali_calendar">Bangladeshi</a> calendars are two such examples. As long as they have a good leap year system, they'll repeat whatever random day they started with, but the main point of this article is that this is such a waste of a new year.</p>
+<h2 id="zodiacal-alignment">Zodiacal alignment</h2>
+<p>Because we have already established that we want to align our calendar with the seasons, I am only going to briefly mention one other way to align a calendar and that is with the zodiac. Under such a system, the new year starts when the sun hits a particular point in the sky. The <a href="https://en.wikipedia.org/wiki/Thai_lunar_calendar">Thai lunar calendar</a>, despite the name, is one such calendar, starting when the sun enters Aries. The <a href="https://en.wikipedia.org/wiki/Tamil_calendar">Tamil calendar</a> is another such calendar, starting when the sun enters one of their constellations.</p>
+<p>As discussed in the first article in this series, calendars aligned with the zodiac will drift relative to the seasons due to the precession of the equinoxes. Because the seasons are what is important to living on Earth, we won't consider the sun's movement relative to the stars in finding an optimal starting point for the year.</p>
+<h2 id="gregorian-calendar">Gregorian calendar</h2>
+<p>January 1. It's the new year of the Gregorian calendar. Other than that, it's a boring day. It's not the start of winter or spring or summer or fall. It's not even the date the sun enters some constellation or rises with some notable star. It's just an astronomically uninteresting date adrift between the waypoints of the seasons.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Roman_calendar">ancient Roman calendar</a> began March 1, just before spring in the northern hemisphere and actually pretty close to the modern March 1. This is sowing time in Italy. The calendar ran for ten months through the harvest. In the winter, the calendar simply did not exist until spring came around again. It was a lunisolar calendar—the year started on a new moon.</p>
+<p>Eventually, the Roman calendar filled out with the months of January and February and the start date of the Roman calendar was moved to January 1. This didn't matter for agricultural purposes because the division of the year was still between reaping and sowing, but some governmental activities started in winter, so it made sense to put the winter at the front of the calendar rather than the rear.</p>
+<p>It was still a complex lunisolar calendar at this time. It takes a lot of work to keep the calendar in sync with the seasons while also syncing up with the moon. Relying on astronomical observations to determine if this year's officials would get an extra month in office also allowed some political shenanigans. As a result, Julius Caesar jettisoned leap months and established a simple solar calendar on the advice of the Sosigenes, who wisely agreed with the first article in this series in thinking that lunisolar calendars were not worth the effort. One leap day every four years would keep the calendar in sync with the seasons.</p>
+<p>Well, not exactly, but we'll get to that in a minute. So what did they choose as the start of the New Year? The reason was not recorded, but if you run time backward, the <a href="https://astropixels.com/ephemeris/phasescat/phases-0099.html">new moon landed 45 minutes into January 2 on 45 BC</a>. That's probably within the margin of error at that time to call January 1 the new moon—the first new moon after the winter solstice. They were smart enough to know that a solar calendar would not remain synced with the lunar cycle, but it looks like they gave themselves one last hurrah.</p>
+<p>If this every-four-years leap year system were perfect, then the new year would start 7 days after the December 25 winter solstice every year forever. Instead, the Julian calendar drifts by 3 days every four centuries. It drifted enough that, by the time of the Council of Nicea in 325, the winter solstice had shifted to around December 21. No one did anything about this then, but this date is important because the Gregorian calendar is going to undo all the drift after this date, but not the drift before.</p>
+<p>By the time 1582 rolled around, the drift had increased by about 10 more days. The winter solstice now fell on around December 11. The Church was concerned about the spring equinox, which was used to calculate Easter, but all seasons shifted equally. The fact that Easter jumps around by more than a month each year because of its insane formula (first Sunday after the first full moon after the spring equinox) apparently bothered no one, but the fact that it consistently occurred 10 days later than it did a millennium before did bother them.</p>
+<p>So the Gregorian calendar was born. It fixed further drift, but also undid the ten days of drift since the definition of Easter was given. October 4, 1582, was immediately followed by October 15, 1582. While that must have been a massive administrative headache for everyone, I am genuinely impressed by the lengths they went to in order to get the calendar to behave the way they wanted.</p>
+<p>And after all this, January 1 still means nothing. The first one was a new moon, seven days after the winter solstice. Then it drifted to twenty days after the solstice. Then it got reset to ten days after the solstice. And here it has been stuck for over 440 years.</p>
+<h2 id="the-best-we-can-do">The best we can do</h2>
+<p>Assuming we are making a tropical solar calendar from scratch, there are really only four sane options for the new year: the two solstices and the two equinoxes. If existing solar calendars were voting, the equinoxes would win. I could not find a single solar calendar that started on a solstice. Is this just coincidence? There aren't that many solar calendars, after all.</p>
+<p>Is the equinox easier to observe than the solstice? If you know your latitude and the tilt of the earth, both are pretty easy to observe. Only a tiny fraction of Earth's population has ever lived beyond the arctic or antarctic circles, where the winter solstice is impossible to see. Maybe the equinoxes are easier to measure because that's when the angle of the sun is moving fastest?</p>
+<p>Astronomically, the solstices feel like more natural starting points. The equinoxes are transition points between the axis of the earth pointing away from the sun to pointing toward the sun. The two equinoxes are basically the same. The sun moves in the sky the same way on both days, namely the day is half daylight and half nighttime. The only difference between a spring and an autumn equinox is that one is transitioning from winter to summer and the other from summer to winter. I'll concede that this is largely a matter of taste.</p>
+<p>Even if we chose a solstice or an equinox, we still need to choose which one. Remember, the winter solstice of the northern hemisphere is the summer solstice of the southern hemisphere. The spring equinox of the northern hemisphere is the autumn equinox of the southern hemisphere. About 68% of Earth's landmass and 90% of Earth's population is in the northern hemisphere. That makes it relatively easy to prioritize the northern hemisphere, but that only helps us if we have a reason to pick one season over the other, such as agriculture. But even if we thought that agriculture was still important enough to drive our world calendar, only the temperate regions with their inhospitable winters consistently have growing seasons stretching from spring to fall. The tropical regions can be totally different.</p>
+<p>Spring is culturally associated with new life and a new beginning. But this is undoubtedly a consequence of the English-speaking culture's roots in the temperate regions of the northern hemisphere. In the absence of an objective reason to pick among options, I would have no problem with deferring to the world's dominant culture. But the English-speaking world is not going to be comfortable with the new year starting in the spring anyway. Our cultural inertia is with the new year starting in the dead of winter.</p>
+<p>With that, there is simply no principled way to choose one of the four seasonal waypoints over the others. That leaves just one final consideration to break the tie: status quo. The Gregorian calendar already starts really close to the winter solstice—just ten days after. If we dropped ten days from one year, the Gregorian calendar would start on the winter solstice every year (or thereabouts) and each season would get three whole months (again, thereabouts).</p>
+<p>This is surprisingly fixable. We have lopped off 10 days from our calendar before. Do we have the courage to do it again? It would be a one-time cost in the form of the biggest time-keeping headache of the industrial age, but it would pay off as thousands of years of a calendar not just synced, but also aligned, with the seasons.</p>
 
 
 
@@ -565,7 +582,7 @@
 <div id="disqus_thread" style="color-scheme: light;"></div>
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://drhagen.com/blog/the-phase-of-the-day-something-else-the-gregorian-calendar-gets-right/';
+        this.page.url = 'https://drhagen.com/blog/the-phase-of-the-year-something-the-gregorian-calendar-gets-very-wrong/';
     };
 
     (function () {
