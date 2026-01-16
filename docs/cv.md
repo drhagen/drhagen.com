@@ -30,7 +30,9 @@ Graduated valedictorian with 4.0 GPA
 
 ### Software Engineer, *Applied BioMath / Certara*, 2017–present
 
-**Director of Engineering**, Feb 2023–present
+**Senior Director of Engineering**, Oct 2025–present
+
+**Director of Engineering**, Feb 2023–Oct 2025
 
 **Senior Principal Scientist**, Sep 2020–Feb 2023
 
